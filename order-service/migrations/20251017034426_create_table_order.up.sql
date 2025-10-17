@@ -1,0 +1,8 @@
+CREATE TABLE "order" (
+    id VARCHAR(12) NOT NULL PRIMARY KEY,
+    owner_id TEXT NOT NULL,
+    product_ids TEXT[] NOT NULL,
+    total_amount DECIMAL(10,2) NOT NULL,
+    status VARCHAR(20) NOT NULL DEFAULT 'PENDING',
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
